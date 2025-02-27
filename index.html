@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAPH</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+    <div class="container-fluid px-4">
+      <!-- Logo -->
+      <ul>
+        <li class="brand-logo">
+          <a href="#" class="navbar-brand fw-bold">
+           <span class="ra">RA</span>
+           <span class="ph">PH</span>
+          </a>
+        </li>
+      </ul>
+      <!-- Toggler -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarContent"
+        aria-controls="navbarContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#product">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <a class="nav-link" href="#" id="cartIcon" style="position: relative;">
+              <i class="fas fa-shopping-cart"></i>
+              <span id="cartCount" class="cart-count">0</span>
+            </a>
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <a class="nav-link" id="register">
+              <i class="fas fa-user"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END NAVBAR -->
+
+  <!-- SECTION 1: VIDEO BACKGROUND -->
+  <section class="hero-section">
+    <video class="bg-video" src="video/metaquest3s.mp4" autoplay muted loop></video>
+  </section>
+  <!-- END SECTION 1 -->
+
+  <!-- SECTION 2: FULLSCREEN TEXT -->
+ <div id="main">
+  <div class="about" id="about">
+      <div class="text-area">
+        ADVANCED TECHNOLOGY<br/>
+        HIGH-PERFORMANCE<br/>
+        HIGH-RESOLUTION<br/>
+        INSIDE-OUT TRACKING<br/>
+        NO LIMITS NO WIRES<br/>
+        JUST PURE VR FREEDOM.
+      </div>
+  </div> 
+ </div>
+
+  <!-- END SECTION 2 -->
+
+  <!-- SECTION: JUDUL -->
+  <section class="py-5 mt-5 text-center" id="product">
+    <div class="container">
+      <!-- Teks “Explore new possibilities” -->
+      <h2 class="fw-bold display-6" id="headingTitle">
+        Explore new possibilities
+      </h2>
+    </div>
+  </section>
+
+  <!-- SECTION: PRODUCT CARD -->
+  <section class="pb-5">
+    <div class="container d-flex justify-content-center">
+      <!-- Product Card -->
+      <div class="product-card" id="productCardC">
+        <div class="product-card-inner">
+          <!-- LEFT PART -->
+          <div class="left-part p-4">
+            <!-- Gambar 448×270 px -->
+            <img
+              src="img/quest-3s.webp"
+              alt="Meta Quest 3"
+              class="img-fluid product-img mb-3"
+            />
+            <!-- Teks “Meta Quest 3” (klik untuk expand) -->
+            <h3 class="meta-quest-3" id="metaQuestTitleC">
+              Meta Quest 3S
+            </h3>
+            <p class="quote-quest-3">Unreal device. Unreal price.</p>
+            <p class="price-quest-3">$299.99</p>
+            <!-- Kapasitas (contoh tunggal) -->
+            <div class="storage-container">
+              <p class="btn1 storage">128GB</p>
+            </div>
+            <div class="button-container">
+              <button href="#" class="btn add-to-cart">Add to cart</button>
+              <button href="#" class="btn buy" id="specC">Buy now</button>
+            </div>
+          </div>
+
+          <!-- RIGHT PART (Deskripsi), muncul saat expanded -->
+          <div class="right-part p-4">
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <strong>High-definition resolution </strong> (1832x1920 pixels per eye).
+              </li>
+              <li class="mb-3">
+                <strong>Wireless design</strong> to move with freedom.
+              </li>
+              <li class="mb-3">
+                <strong>Lightweight comfort.</strong>
+              </li>
+              <li class="mb-3">
+                <strong>Powerful performance</strong> for smooth gameplay.
+              </li>
+              <li class="mb-3">
+                <strong>Mixed reality</strong> and immersive experiences.
+              </li>
+              <li class="mb-0">
+                <strong>Touch Plus controllers</strong> for hands-free navigation.
+              </li>
+            </ul>
+          </div>
+          <!-- END RIGHT PART -->
+        </div>
+      </div>
+      <!-- END Product Card -->
+    </div>
+  </section>
+  <!-- END SECTION -->
+
+
+  <!-- SECTION: PRODUCT CARD -->
+  <section class="pb-5">
+    <div class="container d-flex justify-content-center">
+      <!-- Product Card -->
+      <div class="product-card" id="productCardB">
+        <div class="product-card-inner">
+          <!-- LEFT PART -->
+          <div class="left-part p-4">
+            <!-- Gambar 448×270 px -->
+            <img
+              src="img/quest-3s.webp"
+              alt="Meta Quest 3"
+              class="img-fluid product-img mb-3"
+            />
+            <!-- Teks “Meta Quest 3” (klik untuk expand) -->
+            <h3 class="meta-quest-3" id="metaQuestTitleB">
+              Meta Quest 3S
+            </h3>
+            <p class="quote-quest-3">Level up with double the storage.</p>
+            <p class="price-quest-3">$399.99</p>
+            <!-- Kapasitas (contoh tunggal) -->
+            <div class="storage-container">
+              <p class="btn1 storage">256GB</p>
+            </div>
+            <div class="button-container">
+              <button href="#" class="btn add-to-cart">Add to cart</button>
+              <button href="#" class="btn buy" id="specB">Buy now</button>
+            </div>
+          </div>
+
+          <!-- RIGHT PART (Deskripsi), muncul saat expanded -->
+          <div class="right-part p-4">
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <strong>High-definition resolution</strong> (1832x1920 pixels per eye).
+              </li>
+              <li class="mb-3">
+                <strong>Wireless design</strong> to move with freedom.
+              </li>
+              <li class="mb-3">
+                <strong>Lightweight comfort.</strong>
+              </li>
+              <li class="mb-3">
+                <strong>Powerful performance</strong> for smooth gameplay.
+              </li>
+              <li class="mb-3">
+                <strong>Mixed reality</strong> and immersive experiences.
+              </li>
+              <li class="mb-3">
+                <strong>Touch Plus controllers</strong> for hands-free navigation.
+              </li>
+            </ul>
+          </div>
+          <!-- END RIGHT PART -->
+        </div>
+      </div>
+      <!-- END Product Card -->
+    </div>
+  </section>
+  <!-- END SECTION -->
+
+    <!-- SECTION: PRODUCT CARD -->
+  <section class="pb-1">
+    <div class="container d-flex justify-content-center">
+      <!-- Product Card -->
+      <div class="product-card" id="productCardA">
+        <div class="product-card-inner" id="productCardInnerA">
+          <!-- LEFT PART -->
+          <div class="left-part p-4">
+            <!-- Gambar 448×270 px -->
+            <img
+              src="img/quest-3.webp"
+              alt="Meta Quest 3"
+              class="img-fluid product-img mb-3"
+            />
+            <!-- Teks “Meta Quest 3” (klik untuk expand) -->
+            <h3 class="meta-quest-3" id="metaQuestTitleA">
+              Meta Quest 3
+            </h3>
+            <p class="quote-quest-3">The ultimate experience.</p>
+            <p class="price-quest-3">$499.99</p>
+            <!-- Kapasitas (contoh tunggal) -->
+            <div class="storage-container">
+              <p class="btn1 storage">512GB</p>
+            </div>
+            <div class="button-container">
+              <button href="#" class="btn add-to-cart">Add to cart</button>
+              <button href="#" class="btn buy" id="specA">Buy now</button>
+            </div>
+          </div>
+
+          <!-- RIGHT PART (Deskripsi), muncul saat expanded -->
+          <div class="right-part p-4">
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <strong>4K resolution + Infinite Display</strong> (30% more pixels).
+              </li>
+              <li class="mb-3">
+                <strong>Wireless design</strong> to move with freedom.
+              </li>
+              <li class="mb-3">
+                <strong>Premium slim design.</strong>
+              </li>
+              <li class="mb-3">
+                <strong>Powerful performance</strong> for smooth gameplay.
+              </li>
+              <li class="mb-3">
+                <strong>Mixed reality</strong> and immersive experiences.
+              </li>
+              <li class="mb-3">
+                <strong>Touch Plus controllers</strong> for hands-free navigation.
+              </li>
+            </ul>
+          </div>
+          <!-- END RIGHT PART -->
+        </div>
+      </div>
+      <!-- END Product Card --> 
+    </div>
+  </section>
+  <!-- END SECTION -->
+
+  <!-- SECTION PROMO (BARU) -->
+  <section class="promo-section">
+    <div class="container-fluid promo-container">
+      <div class="row">
+        <div class="col-12 promo-content">
+          <p class="limited-offer">*limited time offer</p>
+          <h1>Get Batman: Arkham Shadow</h1>
+          <p class="promo-subtext">
+            Enter Gotham City in fully immersive VR. Included for a limited time<br>with your Quest 3 or Quest 3S purchase.
+          </p>
+          <div class="promo-footer">
+            DC LOGO, BATMAN &amp; DC.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END SECTION PROMO (BARU) -->
+
+
+  <!-- SECTION FEATURES -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <h2 class="pb-3 mt-5 text-center fw-bold display-6">Safe adventures, happy memories</h2>
+      <div class="row g-4">
+        <!-- Fitur 1 -->
+        <div class="col-md-6">
+          <div class="feature-box p-3">
+            <img src="img/features-left.png" alt="Parental protections" class="img-fluid mb-3" />
+            <h3 class="text-white">Parental protections</h3>
+            <p class="text-white">
+              With parental controls, shared accounts and privacy settings,
+              see how you can feel safe to share the fun.
+            </p>
+          </div>
+        </div>
+        <!-- Fitur 2 -->
+        <div class="col-md-6">
+          <div class="feature-box p-3">
+            <img src="img/features-right.png" alt="Built-in safety measures" class="img-fluid mb-3" />
+            <h3 class="text-white">Built-in safety measures</h3>
+            <p class="text-white">
+              Play, sweat and move safely with built-in features that protect you in the virtual and physical world.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END SECTION FEATURES -->
+
+ <!-- FOOTER SECTION -->
+<section>
+ <footer class="footer-section">
+  <div class="container py-5">
+    <div class="row">
+      <!-- Brand & Sosial -->
+      <div class="social-links">
+        <div class="logo"> 
+          <ul>
+            <li class="brand-logo">
+              <a href="#">
+               <span class="ra">RA</span>
+               <span class="ph">PH</span>
+              </a>
+            </li>
+          </ul>
+        </div> 
+        <div class="social">
+          <a href="https://www.facebook.com/share/1A57wJBmmZ/ "><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/another.fiiiiiii?igsh=ZXF6OGtmcTB1ZzZx"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/rafliza-ardiansa-318184353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div class="quick-links">
+        <h5 class="quick-link">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Preview</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#features">Features</a></li>
+        </ul>
+      </div>
+      <!-- Reach Us -->
+      <div class="reach">
+        <h5 class="reach-us">Reach Us</h5>
+        <p>Address | 120 Street, City, Country</p>
+        <p>email raph@example.com</p>
+        <p>Phone +62 xxx xxxx xxxx</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="copyright">
+      <p>©2025 RAPH | Meta Quest</p>
+    </div>
+ </footer>
+</section> 
+
+<section>
+  <div id="cartOverlay" class="cart-overlay">
+    <div class="cart-container">
+      <button id="closeCart" class="close-cart">&times;</button>
+      <h2>Shopping Cart</h2>
+      <div id="cartItems" class="cart-items">
+        <!-- Item cart akan muncul di sini -->
+      </div>
+      <div class="cart-total">
+        <strong>Total: $<span id="totalPrice">0.00</span></strong>
+      </div>
+      <div class="cart-actions">
+        <button id="clearCart" class="btn btn-secondary">Clear Cart</button>
+        <button id="payCart" class="btn btn-primary">Payment</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
