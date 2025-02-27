@@ -1,0 +1,528 @@
+/* RESET MARGIN & PADDING (opsional) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* UKURAN WEBSITE, UMUMNYA RESPONSIVE */
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+/* NAVBAR CUSTOM */
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.5); /* semi-transparan */
+  backdrop-filter: blur(10px); /* efek blur di belakang */
+  transition: background 0.3s ease;
+  z-index: 1000; /* supaya di atas konten lain */
+}
+
+.custom-navbar .nav-link {
+  color: #000 !important;
+  font-weight: 600;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #0064ee !important;
+}
+
+.brand-logo {
+  position:relative;
+  display: inline-block;
+}
+
+.ra {
+  position: absolute;
+  top: -1;
+  left: -1.2rem;
+  letter-spacing: 0px;
+
+}
+
+.ph {
+  position: absolute;
+  top: 15px;
+  left: -1.2rem;
+  letter-spacing: 0px;
+}
+
+
+/* SECTION 1: HERO (VIDEO) */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* fullscreen */
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* memotong video agar penuh area */
+  z-index: -1; /* video di belakang teks */
+}
+
+.hero-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* Bisa tambahkan background semi-transparan jika perlu:
+  background: rgba(0,0,0,0.3);
+  */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  color: #000;
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  /* Bisa sesuaikan warna teks agar kontras dengan video */
+}
+
+
+/* SECTION 2: FULLSCREEN TEXT */
+#main {
+  width: 100%;
+  height: 100vh;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+}
+
+.about {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.text-area {
+  position: absolute;
+  font-size: 3.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  left: 0;
+  width: 100%;
+}
+
+/* JUDUL SECTION: "Explore new possibilities" */
+#headingTitle {
+ padding-top: 1rem;
+}
+
+/* PRODUCT CARD */
+/* Ukuran awal 680×795 px */
+.product-card {
+  width: 480px;
+  height: 520px;
+  perspective: 1000px; /* 3D perspective for hover */
+  background: rgba(255, 255, 250, 0.7); /* semi-transparan */
+  backdrop-filter: blur(30px); /* efek blur di belakang */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: width 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Expanded: 1740×795 px */
+.product-card.expanded {
+  width: 960px;
+  height: 520px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Inner container for 3D transform */
+.product-card-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease;
+}
+
+/* LEFT PART */
+.left-part {
+  flex: 0 0 auto;
+  width: 480px; /* Agar tidak berubah saat expanded */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Gambar 448×270 px */
+.product-img {
+  width: 280px;
+  height: 170px;
+  object-fit: cover;
+}
+
+/* RIGHT PART (deskripsi), awalnya disembunyikan */
+.right-part {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 3;
+  max-width: 480px;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.meta-quest-3 {
+  padding-top: 30px;
+  padding-bottom: 0px;
+  line-height: 0px;
+  font-weight: 700;
+}
+
+.quote-quest-3 {
+  padding-top: 25px;
+  padding-bottom: 0px;
+  line-height: 0px;
+}
+
+.price-quest-3 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  line-height: 0px;
+  font-weight: 600;
+}
+
+/* Styling dasar untuk tombol */
+.btn1 {
+  padding: 10px 30px; /* Atur ukuran tombol dengan mengubah padding */
+  font-size: 16px;    /* Atur ukuran teks */
+  border: 1px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.storage-container {
+  display: flex;
+  gap: 10px; /* Jarak antara tombol */
+  border: 2px #000;
+  font-weight: 600;
+}
+
+.storage {
+  background-color: #eaeaea;
+  color: #000000;
+}
+
+.storage:hover {
+  border: 2px #000;
+  background-color: #d0d0d0;
+}
+
+/* Container untuk mengatur tombol secara horizontal */
+.button-container {
+  display: flex;
+  gap: 10px; /* Jarak antara tombol */
+}
+
+/* Styling dasar untuk tombol */
+.btn {
+  padding: 10px 30px; /* Atur ukuran tombol dengan mengubah padding */
+  font-size: 16px;    /* Atur ukuran teks */
+  border: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Tombol Add to Cart */
+.add-to-cart {
+  background-color: #242424;
+  color: #ffffff;
+}
+.add-to-cart:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+/* Tombol Buy */
+.buy {
+  background-color: #0064ee;
+  color: #fff;
+}
+.buy:hover {
+  background-color: #0049af;
+  color: #fff;
+}
+/* Tampilkan deskripsi saat .expanded */
+.product-card.expanded .right-part {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Bullet styling */
+.right-part ul li::marker {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* SHIFT HEADING (opsional) */
+.product-card.expanded ~ #headingTitle.shifted {
+  transform: translateX(-200px);
+}
+
+ /*   SECTION FEATURES (BARU)   */
+/* ======================= */
+.features-section {
+  background: linear-gradient(to bottom, #ffffff, #000000);
+  padding-top: 1.25rem ;
+}
+
+.features-section h2 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+/* SECTION PROMO (BARU) */
+.promo-section {
+  position: relative;
+  background-color: #ffffff;
+  padding: 2rem 0;
+}
+.promo-container {
+  background-image: url("img/batman.png"); /* Ganti sesuai gambar latar promo */
+  background-size:1800px 1080px ;
+  background-position: center;
+  padding: 40rem;
+}
+.promo-content {
+  text-align: center;
+  color: #fff;
+}
+.limited-offer {
+  position: absolute;
+  left: 70px;
+  top: 42.5rem;
+  font-style: italic;
+  font-size: 1rem;
+  color: #ffdc91;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.promo-content h1 {
+  position: absolute;
+  left: 70px;
+  top: 47rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.promo-subtext {
+  position: absolute;
+  left: 70px;
+  top: 52rem;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  text-align: left;
+}
+.promo-footer {
+  position: absolute;
+  left: 560px;
+  bottom: 17.5rem;
+  font-size: 0.9rem;
+  color: #252525;
+}
+
+/* ======================= */
+/*   FOOTER SECTION (BARU)   */
+/* ======================= */
+.footer-section {
+  background-color: #000;
+  color: #fff;
+  padding-top: 15rem;
+}
+
+.footer-section .social-links {
+  position: absolute;
+  left: 2rem;
+}
+
+.footer-section .logo { 
+  position: absolute;
+  top: -7px;
+  left: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.footer-section .social {
+  position: absolute;
+  top: 15px;
+  left: 7rem;
+}
+
+.footer-section .social a { 
+  color: #fff;
+  display: inline-block;
+  margin-right: 20px;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+.footer-section .social a:hover {
+  color: #0064ee;
+}
+.footer-section ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section .quick-links {
+  position: absolute;
+  left: 41%;
+}
+
+.list-unstyled {
+  line-height: 2;
+}
+.footer-section .reach {
+  position: absolute;
+  left: 67%;
+}
+
+.reach p {
+  line-height: 1.2;
+}
+
+.quick-link, .reach-us {
+  line-height: 3;
+}
+
+.copyright {
+  align-items: center;
+  text-align: center;
+  padding-top: 18rem;
+  padding-bottom: .5rem;
+}
+
+/* --- Cart Overlay Styles --- */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+  transition: right 0.3s ease;
+  z-index: 2000;
+  overflow-y: auto;
+}
+
+.cart-overlay.active {
+  right: 0;
+}
+
+.cart-container {
+  padding: 20px;
+}
+
+.cart-container h2 {
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.close-cart {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  float: right;
+}
+
+.cart-items {
+  margin-top: 50px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+/* Gambar produk di cart */
+.cart-item-img {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* Container untuk judul dan harga dalam cart item */
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-total {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: right;
+}
+
+/* Styling untuk tombol Clear Cart dan Payment */
+.cart-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* --- Badge Notifikasi pada Cart --- */
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: #fff;
+  font-size: 12px;
+  padding: 1px 6px;
+  border-radius: 50%;
+}
